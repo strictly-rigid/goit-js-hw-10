@@ -1,5 +1,4 @@
 
-import showLoadingMsg from '../modules/showLoadingMsg.js'
 import hideLoadingMsg from '../modules/hideLoadingMsg.js'
 import refs from '../modules/refs.js'
 import { fetchBreeds, fetchCatByBreed } from '../js/cat-api.js';

@@ -2,8 +2,6 @@ import showLoadingMsg from '../modules/showLoadingMsg.js';
 import hideLoadingMsg from '../modules/hideLoadingMsg.js';
 import refs from '../modules/refs.js';
 
-
-
 const API_KEY = 'live_ag5gUMuzkKy1xkRlgH6wDth7ng0wrLjfzgajka7bj4vCf5eioDJ3pQ1w343mAjzM';
 
 export function fetchBreeds() {
@@ -27,6 +25,7 @@ fetch("https://api.thecatapi.com/v1/breeds")
         catBreed.value = breed.id;
         catBreed.textContent = breed.name;
         refs.selector.appendChild(catBreed);
+        
     });
     })
     .catch(error => { 
@@ -53,13 +52,14 @@ export function fetchCatByBreed(breedId) {
             const breedData = data[0];
             console.log(breedData);
             let breedImg = document.createElement('img');
-            breedImg.src = breedData.url;
+                    breedImg.src = breedData.url;
+                    breedImg.style.maxWidth = "320px"
             let breedName = document.createElement('h3');
-            breedName.textContent = breedData.breeds[0].name;
+                    breedName.textContent = breedData.breeds[0].name;
             let breedDescr = document.createElement('p');
-            breedDescr.textContent = breedData.description;
+                    breedDescr.textContent = breedData.description;
             let breedTemper = document.createElement('p');
-            breedTemper.textContent = breedData.breeds[0].temperament;
+                    breedTemper.textContent = breedData.breeds[0].temperament;
             refs.infoArea.innerHTML = '';
             refs.infoArea.append(breedImg, breedName, breedDescr, breedTemper);}
        
