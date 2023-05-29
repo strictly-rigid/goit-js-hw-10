@@ -1,4 +1,4 @@
-export default refs = {
+export const refs = {
     selector: document.querySelector('.breed-select'),
     loadingMsg: document.querySelector('.loader'),
     errorMsg: document.querySelector('.error'),
