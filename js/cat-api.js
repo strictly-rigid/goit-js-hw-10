@@ -1,6 +1,6 @@
 import showLoadingMsg from '../modules/showLoadingMsg.js';
 import hideLoadingMsg from '../modules/hideLoadingMsg.js';
-import refs from '../modules/refs.js';
+import { refs }  from '../modules/refs.js'
 
 const API_KEY = 'live_ag5gUMuzkKy1xkRlgH6wDth7ng0wrLjfzgajka7bj4vCf5eioDJ3pQ1w343mAjzM';
 
